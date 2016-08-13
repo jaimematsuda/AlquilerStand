@@ -91,10 +91,10 @@ WSGI_APPLICATION = 'Alquiler.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'alquilerstand',
-        'USER': 'adminalqsta',
-        'PASSWORD': 'g1Bus@n',
-        'HOST': '127.0.0.1',
+        'NAME': 'dbmsmd625mcd0s',
+        'USER': 'aylgnbzzdmpfxx',
+        'PASSWORD': 'R3ZifYzENKJSy_WBGMnd38yKjb',
+        'HOST': 'ec2-54-163-249-150.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
