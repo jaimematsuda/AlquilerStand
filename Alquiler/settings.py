@@ -92,18 +92,18 @@ WSGI_APPLICATION = 'Alquiler.wsgi.application'
 
 db_from_env = dj_database_url.config(conn_max_age=500) 
 
-DATABASES['default'].update(db_from_env)
+#DATABASES['default'].update(db_from_env)
 
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#        'NAME': 'dbmsmd625mcd0s',
-#        'USER': 'aylgnbzzdmpfxx',
-#        'PASSWORD': 'R3ZifYzENKJSy_WBGMnd38yKjb',
-#        'HOST': 'ec2-54-163-249-150.compute-1.amazonaws.com',
-#        'PORT': '5432',
-#    }
-#}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'dbmsmd625mcd0s',
+        'USER': 'aylgnbzzdmpfxx',
+        'PASSWORD': 'R3ZifYzENKJSy_WBGMnd38yKjb',
+        'HOST': 'ec2-54-163-249-150.compute-1.amazonaws.com',
+        'PORT': '5432',
+    }
+}
 
 
 # Password validation
