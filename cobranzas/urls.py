@@ -9,5 +9,5 @@ urlpatterns = [
 	url(r'^editar/(?P<pk>\d+)$', views.CobranzaUpdate.as_view(), name='edit'),
 	url(r'^estadocuenta/$', views.EstadoCuentaList.as_view(), name='cuenta'),
 	url(r'^estadocuenta/([0-9]{2})/([0-9]{4})$', views.EstadoCuentaList.as_view(), name='cuenta'),
-
+	url(r'^estadocuentacontrato/$', views.EstadoCuentaContratoList.as_view(), name='cuentacontrato'),
 ]
