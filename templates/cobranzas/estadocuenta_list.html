@@ -42,7 +42,7 @@
 			<tr>
   				<td>{{ cr.local.piso }}</td>
     			<td>
-    				<a href="{% url "cobranzas:list" %}">
+    				<a href="{% url "cobranzas:cuentacontrato" %}">
     					{{ cr.id }}
     					{{ cr.local.tipo.nombre }}
     					{{ cr.local.numero }},
@@ -59,7 +59,7 @@
   			<tr>
   				<td>{{ pr.contrato__local__piso }}</td>
     			<td>
-    				<a href="{% url "cobranzas:list" %}">
+    				<a href="{% url "cobranzas:cuentacontrato" %}">
                     	{{ pr.contrato }}  
                     	{{ pr.contrato__local__tipo__nombre }}  
                     	{{ pr.contrato__local__numero }}, 
