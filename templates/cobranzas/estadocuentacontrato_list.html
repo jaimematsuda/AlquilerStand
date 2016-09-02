@@ -23,6 +23,8 @@
 	    </select>
 	    <label>Año :</label>
 	    <input type="text" id="year" name="year" value={{ year }} />
+	    <label>Contrato :</label>
+	    <input type="text" id="contrato" name="contrato" value={{ contrato }} />
 	    <input type="button" id="submit" value="Filtrar" />
 	</form>
 	<table id="listaEstadoCuenta" class="Table-lista">
@@ -60,7 +62,7 @@
 	<script type="text/javascript">
         $(function(){
             BotonAgregar();
-            EnviarMesAnio("cobranza/estadocuenta");
+            EnviarMesAnioContrato("cobranza/estadocuenta/contrato");
             MesPredeterminado("{{ month }}");
             SumarColumna('listaEstadoCuenta', 4);
             PonerComaColumna('listaEstadoCuenta', 4);                               

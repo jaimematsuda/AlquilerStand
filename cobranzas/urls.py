@@ -9,6 +9,7 @@ urlpatterns = [
 	url(r'^editar/(?P<pk>\d+)$', views.CobranzaUpdate.as_view(), name='edit'),
 	url(r'^estadocuenta/$', views.EstadoCuentaList.as_view(), name='cuenta'),
 	url(r'^estadocuenta/([0-9]{2})/([0-9]{4})$', views.EstadoCuentaList.as_view(), name='cuenta'),
-	#url(r'^estadocuenta/contrato/$', views.EstadoCuentaContratoList.as_view(), name='cuentacontrato'),
-	url(r'^estadocuenta/contrato/([0-9]{2})/([0-9]{4})/(?P<pk>\d+)$', views.EstadoCuentaContratoList.as_view(), name='cuentacontrato'),
+	url(r'^estadocuenta/contrato/$', views.EstadoCuentaContratoList.as_view(), name='cuentacontrato'),
+	url(r'^estadocuenta/contrato/(?P<id>\d+)$', views.EstadoCuentaContratoList.as_view(), name='cuentacontrato'),
+	url(r'^estadocuenta/contrato/(?P<month>[0-9]{2})/(?P<year>[0-9]{4})/(?P<id>\d+)$', views.EstadoCuentaContratoList.as_view(), name='cuentacontrato'),
 ]

@@ -30,6 +30,20 @@ function EnviarMesAnio(aplicacion){
     });
 }
 
+function EnviarMesAnioContrato(aplicacion){
+    $("#submit").click(function(){
+        var year = $("#year").val();
+        var month = $("#month").val();
+        var contrato = $("#contrato").val();
+        location.pathname = "/" + aplicacion + "/" + month + "/" + year + "/" + contrato;
+    });
+}
+
+function MesPredeterminado(month){
+    var selec = month - 01;
+    $("#form_month_year select").find("option:eq(" + selec + ")").attr("selected", true);
+}
+
 function EnviarLote(aplicacion){
     $("#submitfiltro").click(function(){
         var lote = $("#lote").val();
@@ -42,11 +56,6 @@ function BotonAgregar(){
         var jsurl = $(this).attr("name");
         location.pathname = jsurl;
     })
-}
-
-function MesPredeterminado(month){
-    var selec = month - 01;
-    $("#form_month_year select").find("option:eq(" + selec + ")").attr("selected", true);
 }
 
 function Calendario(){

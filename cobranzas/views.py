@@ -142,9 +142,19 @@ class EstadoCuentaContratoList(ListView):
 	template_name = 'cobranzas/estadocuentacontrato_list.html'
 
 	def get_queryset(self):
-		return Cobranza.objects.filter(contrato=1)
+		month = self.kwargs['month']
+		year = self.kwargs['year']
+		periodo = '%s-%s' % (month, year)
+		contrato = self.kwargs['id']
+		return Cobranza.objects.filter(contrato=contrato, periodo=periodo)
 
 	def get_context_data(self, **kwargs):
 		context = super(EstadoCuentaContratoList, self).get_context_data(**kwargs)
+		contrato = self.kwargs['id']
+		month = self.kwargs['month']
+		year = self.kwargs['year']	
 		context.update({'titulo': 'Estado de Cuenta Contrato'})
+		context.update({'contrato': contrato})
+		context.update({'month': month})
+		context.update({'year': year})
 		return context
