@@ -14,10 +14,9 @@
             {% endfor %}
         </datalist>
         <input type="button" id="submitfiltro" value="Filtrar" />
-    </form>
-    <button id="Canvas-main-button" class="Canvas-main-button" name="{% url "lotes:new_cobranza" %}">Agregar Cobranza</button>
-    <p>{{ rango_med }}</p>
-
+    </form>  
+    <button id="Canvas-main-button-agregar" class="Canvas-main-button Canvas-main-button-agregar" name="{% url "lotes:new_cobranza" %}">Agregar Cobranza</button>
+    <button id="Canvas-main-button-cerrar" class="Canvas-main-button Canvas-main-button-cerrar" name="{% url "lotes:new_cobranza" %}">Cerrar Lote</button>
 	<table id="listaCobranza" class="Table-lista">
 		<caption>Cobranzas</caption>
 		<thead>
@@ -52,7 +51,7 @@
 		</tfoot>
 	</table>
 	<br /><br />
-	<button id="Canvas-main-button" class="Canvas-main-button" name="{% url "lotes:new_Pago" %}">Agregar Pago</button>
+	<button id="Canvas-main-button-agregar" class="Canvas-main-button Canvas-main-button-agregar" name="{% url "lotes:new_Pago" %}">Agregar Pago</button>
 	<table id="listaPago" class="Table-lista">
 		<caption>Pagos</caption>
 		<thead>

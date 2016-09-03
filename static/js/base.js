@@ -52,7 +52,7 @@ function EnviarLote(aplicacion){
 }
 
 function BotonAgregar(){
-    $(".Canvas-main-button").click(function(){
+    $(".Canvas-main-button-agregar").click(function(){
         var jsurl = $(this).attr("name");
         location.pathname = jsurl;
     })
